@@ -1,0 +1,37 @@
+# Example targets file. Copy to targets.yaml and fill in VERIFIED values.
+# The loader refuses targets with `verified: false` unless run with --allow-unverified,
+# and the dashboard marks such targets with a banner.
+
+- id: vertana-n
+  name: Cima Vertana / Vertainspitze — north face
+  type: north_face
+  verified: false            # set true only after checking coordinates and elevations on a map
+  lat: null                  # TODO: base of the face, WGS84
+  lon: null
+  elevation_m:
+    base: null               # TODO
+    top: 3545                # summit
+  aspect_deg: 0
+  slope_deg: null            # TODO: mean slope of the crux section
+  stations:
+    - provider: bz
+      code: "06090SF"        # Sulden Madritsch, 2825 m
+      role: high
+      note: ""
+    - provider: bz
+      code: "06400MS"        # Sulden valley, 1902 m
+      role: valley
+      note: ""
+
+- id: hochferner-n
+  name: Hochferner / Gran Pilastro — north face
+  type: north_face
+  verified: false
+  lat: null
+  lon: null
+  elevation_m:
+    base: null
+    top: null
+  aspect_deg: 0
+  slope_deg: null
+  stations: []               # TODO: pick after check-api (see data-sources/bz.md)
